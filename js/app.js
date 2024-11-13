@@ -1,9 +1,16 @@
 // Inicialización de variables y objectos
 const formulario = document.getElementById('formulario');
 const nick = document.getElementById('nick');
-const email = document.getElementById('email');
 const size = document.getElementById('size');
+const email = document.getElementById('email');
 const error = document.getElementById('error');
+
+
+// Comprobación de errores
+if (sessionStorage.getItem('error') != null) {
+    error.innerText = sessionStorage.getItem('error');
+    sessionStorage.removeItem('error');
+}
 
 
 // Funciones de evento
@@ -17,10 +24,12 @@ function comprobar_formulario(event) {
         error.innerText = 'El necesario seleccionar el tamaño del panel';
         return false;
     }
+    historico(nick, size, email);
+    guardar_datos(nick, size, email);
     return true;
 }
 
 
 // Eventos
 formulario.addEventListener('submit', comprobar_formulario);
-
+geolocalizacion();
