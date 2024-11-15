@@ -22,7 +22,7 @@ function comprobar_formulario(event) {
         error.innerText = 'El necesario seleccionar el tamaño del panel';
         return false;
     }
-    guardar_datos(nick, size, email);
+    guardar_datos(nick, size, email, avatar_container);
     historico(nick, size, email);
 
     return true;

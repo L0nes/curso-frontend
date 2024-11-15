@@ -1,22 +1,26 @@
 // Variables
 var nick2;
-var size2;
+var size;
 var email2;
 var geolocalizacionTxt;
+var avatarImg;
 
 
 // Session storage
-function guardar_datos (nick, size, email) {
+function guardar_datos (nick, size, email, avatarCont) {
     sessionStorage.setItem('nick', nick.value);
     sessionStorage.setItem('size', size.value);
     sessionStorage.setItem('email', email.value);
     sessionStorage.setItem('geolocalizacionTxt', geolocalizacionTxt);
+    sessionStorage.setItem('avatarImg', avatarCont.src);
 }
 
 function obtener_datos () {
     nick2 = sessionStorage.getItem('nick');
-    size2 = sessionStorage.getItem('size');
+    size = sessionStorage.getItem('size');
     email2 = sessionStorage.getItem('email');
+    avatarImg = sessionStorage.getItem('avatarImg');
+    console.log(size);
 }
 
 function comprobar_datos () {
@@ -42,7 +46,7 @@ function geolocalizacion () {
 
 
 // Local storage
-function historico (nick2, size2, email2) {
+function historico (nick2, size, email2) {
     console.log('ola');
     
     let historicoStorage = localStorage.getItem('historico');
@@ -57,7 +61,7 @@ function historico (nick2, size2, email2) {
     let registro = {
         usuario: nick2.value,
         email: email2.value,
-        tamano: size2.value,
+        tamano: size.value,
         fecha: Date.now()
     }
     historico2.push(registro);
