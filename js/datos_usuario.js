@@ -20,7 +20,6 @@ function obtener_datos () {
     size = sessionStorage.getItem('size');
     email2 = sessionStorage.getItem('email');
     avatarImg = sessionStorage.getItem('avatarImg');
-    console.log(size);
 }
 
 function comprobar_datos () {

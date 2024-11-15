@@ -77,10 +77,19 @@ img{
     border: 1px solid #ced4da;
 }
 .item{
+    border-radius: 45px;
+    border: solid 10px #fff;
+    width: 45px;
+    height: 45px;
+}
+.rojo{
+    background-color: #fd0c49;
+}
+.verde{
     background-color: #7ac943;
-    border-radius: 5px;
-    width: 50px;
-    height: 50px;
+}
+.azul{
+    background-color: #006db2;
 }
 #nick {
     width: 150px;
@@ -90,16 +99,41 @@ img{
     margin-right: 30px;
 }
 #juego{
+    position: absolute;
+    z-index: 2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     justify-items: center;
     align-items: center;
     width: 500px;
-    min-height: 400px;
+    height: 600px;
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 5px 5px 0px 0px;
+}
+#juegoAcabado{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 600px;
+    background-color: #263238;
+    border: 1px solid #ced4da;
+    border-radius: 5px 5px 0px 0px;
+}
+#juegoAcabado button{
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    width: 200px;
 }
 #tituloJuego{
     width: 500px;
