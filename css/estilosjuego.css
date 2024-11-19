@@ -84,12 +84,15 @@ img{
 }
 .rojo{
     background-color: #fd0c49;
+    transition: background-color 0.4s;
 }
 .verde{
     background-color: #7ac943;
+    transition: background-color 0.4s;
 }
 .azul{
     background-color: #006db2;
+    transition: background-color 0.4s;
 }
 #nick {
     width: 150px;
@@ -112,6 +115,10 @@ img{
     border: 1px solid #ced4da;
     border-radius: 5px 5px 0px 0px;
 }
+.juegoAcabadoColor {
+    background-color: #263238;
+    transition: background-color 0.4s;
+}
 #juegoAcabado{
     z-index: 1;
     position: absolute;
@@ -120,7 +127,6 @@ img{
     align-items: center;
     width: 500px;
     height: 600px;
-    background-color: #263238;
     border: 1px solid #ced4da;
     border-radius: 5px 5px 0px 0px;
 }

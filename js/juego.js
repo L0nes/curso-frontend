@@ -62,6 +62,8 @@ function cuenta_atras () {
         }
         document.removeEventListener('mouseup', finalizar_marcar);
 
+        document.getElementById('juegoAcabado').classList.add('juegoAcabadoColor')
+
         document.getElementById('juegoAcabado').style.zIndex = '2';
         document.getElementById('juego').style.zIndex = '1';
 
